@@ -1,4 +1,5 @@
-Welcome to the Positron project!
+# Positron
+*Welcome to the Positron project!*
 
 It is the nature of the human to be surrounded by chaos. This conflict guides our actions and consumes the most valuable resource we have, which is time. It is not strange that circumstances force us to focus on the negative of our lives. 
 
@@ -7,6 +8,11 @@ We understand the importance of being aware of your surroundings, but we highlig
 
 This project is our attempt to generate a definition for what it means to be positive. 
 
-Current Tasks:
+## Getting Started
+`git clone https://github.com/Positron-COVID19/Positron.git`
+`npm install`
+`npm start`
+Navigate to `localhost:3000` in your browser 
 
-	1. Create a navigation bar 
+## Current Tasks
+1. Create a navigation bar 
