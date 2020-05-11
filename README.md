@@ -10,8 +10,11 @@ This project is our attempt to generate a definition for what it means to be pos
 
 ## Getting Started
 `git clone https://github.com/Positron-COVID19/Positron.git`
+
 `npm install`
+
 `npm start`
+
 Navigate to `localhost:3000` in your browser 
 
 ## Current Tasks
