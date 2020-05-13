@@ -5,7 +5,7 @@ app.set('views', './');
 
 app.get("/", (request, response) => {
     // Cambia navbar por el nombre del archivo que vas a usar
-    response.render("navTut", {});
+    response.render("navigationBar", {});
 });
 
 // This is whar allows us to use our server on PORT 3000
