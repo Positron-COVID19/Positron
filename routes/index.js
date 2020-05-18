@@ -6,4 +6,8 @@ routes.get("/", (request, response) => {
     response.render("index", {});
 });
 
+routes.get("/about", (request, response) => {
+    response.render("about", {});
+});
+
 module.exports = routes;
