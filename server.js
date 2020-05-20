@@ -9,7 +9,13 @@ app.use(express.static('public'));
 
 // Logs all requests to the terminal
 const logger = (req, res, next) => {
-    console.log(`\x1b[34m${req.method} ${req.originalUrl}\x1b[0m`);
+    const formatBlue = str => {
+        const blueBegin = "\x1b[34m";
+        const blueEnd = "\x1b[0m";
+        return `${blueBegin}${str}${blueEnd}`;
+    };
+
+    console.log(formatBlue(req.method + " " + req.originalUrl));
     next();
 };
 app.use(logger);

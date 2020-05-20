@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 echo 'Building...'
-                dir('~/Positron') {
+                dir('/home/ubuntu/Positron') {
                     sh '''
                         git checkout master
                         git pull
