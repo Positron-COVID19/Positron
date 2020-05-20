@@ -5,6 +5,8 @@ const app = express();
 app.set('view engine', 'pug');
 app.set('views', './views/pages');
 
+app.use(express.static('public'));
+
 // Logs all requests to the terminal
 const logger = (req, res, next) => {
     console.log(`\x1b[34m${req.method} ${req.originalUrl}\x1b[0m`);
