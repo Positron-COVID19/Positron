@@ -7,21 +7,27 @@ faker.seed(12345);
 routes.get("/", (request, response) => {
     const dummyArticles = [
         {
-            headline: "Sunnyvale company wins FDA approval for first rapid coronavirus test with 45-minute detection time",
+            headline: "Boss Who Turned Herself Into a Potato During Video Conference Is a Root Vegetable Comedy Legend",
             subheadline: faker.lorem.sentence(),
-            imageUrl: "https://www.mercurynews.com/wp-content/uploads/2020/03/SJM-L-CEPHEID-0322-2.jpg?w=1024&h=683",
+            source: "Time USA",
+            url: "https://time.com/5813683/boss-turns-herself-into-a-potato/",
+            imageUrl: "https://pbs.twimg.com/media/EUXiJW0XQAIBUX6?format=jpg&name=medium",
             author: faker.name.findName()
         },
         {
-            headline: "Roche antibody test that’s 100% accurate approved in breakthrough that could help ease UK coronavirus",
+            headline: "Atlanta Humane Society lets puppies roam aquarium closed due to coronavirus",
             subheadline: faker.lorem.sentence(),
-            imageUrl: "https://www.thesun.co.uk/wp-content/uploads/2020/05/DD-COMPOSITE-CORONA-TESTING.jpg?strip=all&quality=100&w=1200&h=800&crop=1",
+            source: "The Hill",
+            url: "https://thehill.com/blogs/blog-briefing-room/news/489706-atlanta-humane-society-lets-puppies-roam-aquarium-closed-due-to",
+            imageUrl: "https://media.nbcchicago.com/2019/09/WMAQ_100000007720579.jpg",
             author: faker.name.findName()
         },
         {
-            headline: "'Parks and Recreation' cast returning for scripted special to benefit coronavirus relief",
+            headline: "Orangutan demonstrates hand-washing",
             subheadline: faker.lorem.sentence(),
-            imageUrl: "https://static.foxnews.com/foxnews.com/content/uploads/2020/04/Parks-and-Rec-cast.jpg",
+            source: "ABC News",
+            url: "https://abcnews.go.com/International/video/orangutan-demonstrates-hand-washing-69672120https://time.com/5813683/boss-turns-herself-into-a-potato/",
+            imageUrl: "https://img.srgcdn.com/e//SmNaT0hJQWxpcWhBSWRUVmJtam8ucG5n.jpg",
             author: faker.name.findName()
         }
     ];
