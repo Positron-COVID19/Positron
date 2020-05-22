@@ -11,7 +11,7 @@ pipeline {
                     sh 'pwd'
                     sh 'whoami'
                     sh 'git pull'
-                    sh 'npm install'
+                    sh '/home/ubuntu/.nvm/versions/node/v10.16.0/bin/npm install'
                 }
             }
         }
