@@ -10,10 +10,7 @@ pipeline {
                 dir('/home/ubuntu/Positron') {
                     sh 'pwd'
                     sh 'whoami'
-                    sh '''
-                        git checkout master
-                        git pull
-                    '''
+                    sh 'git pull'
                     sh 'npm install'
                 }
             }
