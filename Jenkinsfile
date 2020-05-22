@@ -2,6 +2,9 @@ pipeline {
     agent any
     stages {
         stage('build') {
+            when {
+                branch 'master'
+            }
             steps {
                 echo 'Building...'
                 dir('/home/ubuntu/Positron') {
@@ -14,11 +17,17 @@ pipeline {
             }
         }
         stage('test') {
+            when {
+                branch 'master'
+            }
             steps {
                 echo 'No tests written yet.'
             }
         }
         stage('deploy') {
+            when {
+                branch 'master'
+            }
             steps {
                 echo 'Redeploying...'
                 sh 'pm2 restart Positron'
