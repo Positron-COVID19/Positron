@@ -10,8 +10,9 @@ pipeline {
                 dir('/home/ubuntu/Positron') {
                     sh 'pwd'
                     sh 'whoami'
+                    sh 'su - ubuntu'
                     sh 'git pull'
-                    sh '/home/ubuntu/.nvm/versions/node/v10.16.0/bin/npm install'
+                    sh 'npm install'
                 }
             }
         }
