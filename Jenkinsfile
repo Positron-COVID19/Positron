@@ -8,6 +8,8 @@ pipeline {
             steps {
                 echo 'Building...'
                 dir('/home/ubuntu/Positron') {
+                    sh 'pwd'
+                    sh 'whoami'
                     sh '''
                         git checkout master
                         git pull
