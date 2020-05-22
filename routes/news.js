@@ -11,7 +11,7 @@ routes.get("/", (request, response) => {
             subheadline: faker.lorem.sentence(),
             source: "Time USA",
             url: "https://time.com/5813683/boss-turns-herself-into-a-potato/",
-            imageUrl: "https://pbs.twimg.com/media/EUXiJW0XQAIBUX6?format=jpg&name=medium",
+            imageUrl: "https://i.insider.com/5e84b41914f18f60a60cbab4?width=1136&format=jpeg",
             author: faker.name.findName()
         },
         {
