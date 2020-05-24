@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const app = express();
 
@@ -17,6 +18,11 @@ const logger = (req, res, next) => {
     next();
 };
 app.use(logger);
+
+// Make /public folder public, so that a request like GET /favicon.ico will automatically
+//     be handled by sending HTTP 200 along with /public/favicon.ico as the response
+const staticPath = path.join(__dirname, "public");
+app.use(express.static(staticPath));
 
 // Look inside /routes/index.js for the code handling requests
 app.use("/", require("./routes/index"));
