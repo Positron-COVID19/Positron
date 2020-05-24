@@ -6,6 +6,8 @@ pipeline {
                 echo 'Building...'
                 dir('/opt/Positron') {
                     sh '''
+                        git config --global user.email "liao.canada@gmail.com"
+                        git config --global user.name "David Liao"
                         git checkout master
                         git pull
                     '''
