@@ -6,4 +6,6 @@ routes.get("/", (request, response) => {
     response.render("index", {});
 });
 
+routes.use("/news", require("./news"));
+
 module.exports = routes;

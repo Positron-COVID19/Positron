@@ -4,3 +4,13 @@ html
 
   body
     include ../partials/navigationBar
+    
+    div(class ="media center p-3 my-5 mx-5 bg-light")
+        img(src=article.imageUrl class="align-self-center mr-3 img-thumbnail" style="width : 50%")
+        div(class="media-body")
+            h1(class="mt-0") #{article.headline}
+            small(class="mt-0 text-muted") #{"Written by " + article.author}
+            p #{article.subheadline}
+            p(class="mt-0") #{article.paragraph}
+            p(class="mt-0") #{article.paragraph}
+            
