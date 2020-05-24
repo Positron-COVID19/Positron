@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 echo 'Building...'
-                dir('/home/ubuntu/Positron') {
+                dir('/opt/Positron') {
                     sh '''
                         git checkout master
                         git pull
@@ -20,8 +20,12 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                echo 'Redeploying...'
-                sh 'pm2 restart Positron'
+                echo 'PM2 watching enabled, no need to manually deploy...'
+            }
+        }
+        stage('sanity check') {
+            steps {
+                sh 'curl --fail localhost:3000'
             }
         }
     }
