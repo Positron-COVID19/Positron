@@ -1,0 +1,20 @@
+//- Required variables:
+//- * articles: { headline: string, subheadline: string, imageUrl: string, author: string }[] 
+
+html
+  head
+    include ../../partials/resources
+
+  body
+    include ../../partials/navigationBar
+
+    div.card-deck
+      each article in articles
+        .card.h-100
+          img.card-img-top(src=article.imageUrl)
+          .card-body
+            a(href="#")
+              h5.card-title #{article.headline}
+            p.card-text #{article.subheadline}
+          .card-footer
+            small.text-muted #{"Written by " + article.author}

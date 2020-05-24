@@ -29,6 +29,7 @@ routes.get("/", (request, response) => {
     response.render("news/index", { articles: dummyArticles });
 });
 
+
 //Refers to /news/123
 routes.get("/:newsID", (request, response) => {
     let index = parseInt(request.params.newsID);
