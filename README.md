@@ -1,4 +1,4 @@
-# Positron 
+# Positron - An Amazing Project
 *Welcome to the Positron project!*
 
 It is the nature of the human to be surrounded by chaos. This conflict guides our actions and consumes the most valuable resource we have, which is time. It is not strange that circumstances force us to focus on the negative of our lives. 
