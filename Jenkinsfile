@@ -3,15 +3,17 @@ pipeline {
     stages {
         stage('build') {
             when {
-                branch 'master'
+                branch 'master'   
             }
             steps {
                 echo 'Building...'
-                dir('/home/ubuntu/Positron') {
-                    sh 'pwd'
-                    sh 'whoami'
-                    sh 'su - ubuntu'
-                    sh 'git pull'
+                dir('/opt/Positron') {
+                    sh '''
+                        git config --global user.email "liao.canada@gmail.com"
+                        git config --global user.name "David Liao"
+                        git checkout master
+                        git pull
+                    '''
                     sh 'npm install'
                 }
             }
@@ -29,8 +31,12 @@ pipeline {
                 branch 'master'
             }
             steps {
-                echo 'Redeploying...'
-                sh 'pm2 restart Positron'
+                echo 'PM2 watching enabled, no need to manually deploy...'
+            }
+        }
+        stage('sanity check') {
+            steps {
+                sh 'curl --fail localhost:3000'
             }
         }
     }
